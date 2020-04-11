@@ -1,4 +1,5 @@
 <?php
+$error="";
 if ($_SERVER['REQUEST_METHOD']==="POST"){
     if (empty($_POST['email'])){
         $emailError="Email is empty";
