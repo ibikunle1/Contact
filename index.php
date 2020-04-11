@@ -51,6 +51,8 @@ if ($_SERVER['REQUEST_METHOD']==="POST"){
         $subject = 'Contacting you';
         if (mail($to, $subject, $emailBody, $headers)){
             $sent = true;
+        }else { 
+        $error = "Unable to submit yourresponse, please try again"
         }
     }
 }
@@ -126,6 +128,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST"){
     </div>
     <?php endif;?>
     <?php 
+    echo $error;
     if (isset($sent)&& $sent ===true):?>
     <div id = "done-message">
     Your data was succesfully submitted
