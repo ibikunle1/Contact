@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD']==="POST"){
         if (mail($to, $subject, $emailBody, $headers)){
             $sent = true;
         }else { 
-        $error = "Unable to submit yourresponse, please try again"
+        $error = "Unable to submit your response, please try again";
         }
     }
 }
